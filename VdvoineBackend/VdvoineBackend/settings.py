@@ -37,6 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'apps.basket',
+    'apps.orders',
+    'apps.products',
+    'apps.promotions'
 ]
 
 MIDDLEWARE = [
@@ -115,3 +120,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
+
+
+#include media files
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
