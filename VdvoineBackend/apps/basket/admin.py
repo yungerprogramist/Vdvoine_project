@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from apps.basket.models import Basket, UserSession
+from .models import Basket, UserSession
 
 # Register your models here.
 

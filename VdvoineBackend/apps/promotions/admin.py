@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from apps.promotions.models import PromoCode
+from .models import PromoCode
 
 # Register your models here.
 

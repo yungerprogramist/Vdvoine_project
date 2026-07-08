@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from apps.products.models import Collection, ProductCard, ProductVariant, Size
+from .models import Collection, ProductCard, ProductVariant, Size
 
 # Register your models here.
 

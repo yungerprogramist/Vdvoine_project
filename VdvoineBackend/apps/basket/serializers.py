@@ -2,7 +2,7 @@ from rest_framework import serializers
 
 from apps.products.models import ProductVariant
 from apps.products.serializers import ProductCardListSerializer, SizeSerializer
-from apps.basket.models import Basket
+from .models import Basket
 
 
 class ProductVariantSerializer(serializers.ModelSerializer):

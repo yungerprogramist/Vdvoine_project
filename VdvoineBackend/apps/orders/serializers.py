@@ -5,7 +5,7 @@ from apps.basket.models import Basket
 from apps.products.serializers import ProductVariantSerializer as ProductVariantDetailSerializer
 from apps.products.models import ProductVariant
 from apps.promotions.models import PromoCode
-from apps.orders.models import Order, OrderItem
+from .models import Order, OrderItem
 
 
 # --- OrderItem ---
