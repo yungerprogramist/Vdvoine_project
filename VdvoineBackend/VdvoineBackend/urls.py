@@ -1,33 +1,18 @@
-"""
-URL configuration for VdvoineBackend project.
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/6.0/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
 from django.contrib import admin
-from django.urls import include, path
-
+from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    # path('', index, name='index'),
-    path('products/', include('apps.products.urls', namespace='products')),
-    path('orders/', include('apps.orders.urls', namespace='orders')),
-    path('promotions/', include('apps.promotions.urls', namespace='promotions')),
-    path('basket/', include('apps.basket.urls', namespace='basket')),
-]
+    path("admin/", admin.site.urls),
+
+    path("api/basket/",     include("apps.basket.urls",     namespace="basket")),
+    path("api/products/",   include("apps.products.urls",   namespace="products")),
+    path("api/orders/",     include("apps.orders.urls",     namespace="orders")),
+    path("api/promotions/", include("apps.promotions.urls", namespace="promotions")),
+    # path("api/payments/",   include("apps.payments.urls",   namespace="payments")),
+    # path("api/delivery/",   include("apps.delivery.urls",   namespace="delivery")),
+] # + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

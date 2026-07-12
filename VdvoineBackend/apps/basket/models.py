@@ -1,6 +1,6 @@
 from django.db import models
 
-from .models import ProductVariant
+from apps.products.models import ProductVariant
 
 
 class UserSession(models.Model):
